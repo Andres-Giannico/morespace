@@ -70,6 +70,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
 }
+.brand-logo picture,
 .brand-logo img {
   height: 100%;
   width: auto;
@@ -109,6 +110,18 @@ img { max-width: 100%; display: block; }
 .nav a:hover {
   background: var(--blue-soft);
   color: var(--navy);
+}
+
+.nav-cta {
+  background: var(--navy);
+  color: white !important;
+  border: 1px solid var(--navy);
+  font-weight: 600;
+}
+
+.nav-cta:hover {
+  background: var(--navy-dark);
+  color: white !important;
 }
 
 .lang-switcher {
