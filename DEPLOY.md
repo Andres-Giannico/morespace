@@ -14,9 +14,11 @@ En la terminal, desde la carpeta del proyecto:
 ```bash
 cd /Users/andresgiannico/Developer/Morespace
 
-# Si aún no hiciste el primer commit:
+# Si aún no hiciste el primer commit (si sale error "trailer", usa la línea siguiente):
 git add .
 git commit -m "Initial commit"
+# Alternativa si git commit falla con error "trailer":
+# git -c core.hooksPath=/dev/null commit -m "Initial commit"
 
 # Añadir el remoto (sustituye TU-USUARIO y NOMBRE-REPO por los tuyos)
 git remote add origin https://github.com/TU-USUARIO/NOMBRE-REPO.git

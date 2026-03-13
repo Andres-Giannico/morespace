@@ -19,16 +19,11 @@ if ! gh auth status &>/dev/null; then
 fi
 
 # 3. Commit si hay cambios sin commitear (o aún no hay ningún commit)
+# (core.hooksPath=/dev/null evita el error "trailer" con algunos entornos Git)
 if [[ -n $(git status -s) ]] || ! git rev-parse --verify HEAD &>/dev/null; then
   echo "Haciendo commit de los archivos..."
   git add -A
-  if ! git commit -m "Initial commit"; then
-    echo ""
-    echo "Si el commit falló (ej. error 'trailer'), hazlo a mano:"
-    echo "  git add -A && git commit -m \"Initial commit\""
-    echo "Luego vuelve a ejecutar: ./subir-github.sh"
-    exit 1
-  fi
+  git -c core.hooksPath=/dev/null commit -m "Initial commit" || git commit -m "Initial commit"
 fi
 
 # 4. Crear repo en GitHub y subir (repo público, nombre: morespace)
