@@ -1,0 +1,16 @@
+{
+  "name": "morespace",
+  "version": "1.0.0",
+  "description": "Web de More Space — empresa de trasteros en Ibiza.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "vercel --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vercel": "^50.32.5"
+  }
+}
