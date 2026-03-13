@@ -49,11 +49,10 @@ img { max-width: 100%; display: block; }
 
 .topbar-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 14px 0;
-  position: relative;
 }
 
 .brand {
@@ -61,7 +60,6 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 16px;
   min-width: 0;
-  margin-left: 12%;
 }
 
 .brand-logo {
@@ -93,8 +91,6 @@ img { max-width: 100%; display: block; }
 }
 
 .nav {
-  position: absolute;
-  right: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
