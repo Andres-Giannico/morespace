@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/icons/apple-touch-icon.png" />
+  <title>Privacy and cookie policy — MoreSpace Ibiza</title>
+  <meta name="description" content="Privacy and cookie policy of MoreSpace Ibiza. Information about data processing and cookies under GDPR." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <a href="/en/" style="display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit;">
+          <div class="brand-logo">
+            <picture>
+              <source srcset="../images/logo-morespace.webp" type="image/webp" />
+              <img src="../images/logo-morespace.png" alt="MoreSpace Ibiza" />
+            </picture>
+          </div>
+          <div>
+            <strong>MoreSpace Ibiza</strong>
+            <span>Container storage · Ibiza</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="/en/">Home</a>
+        <a href="/en/#contacto">Contact</a>
+        <span class="lang-switcher"><a href="../privacidad.html">ES</a> · <a href="privacidad.html" class="lang-active">EN</a></span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding: 48px 0 80px; max-width: 720px;">
+    <h1 style="font-size: 32px; margin-bottom: 24px; color: var(--navy);">Privacy and cookie policy</h1>
+    <p style="color: var(--muted); margin-bottom: 32px;">Last updated: March 2026</p>
+
+    <section style="margin-bottom: 32px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px; color: var(--navy);">1. Data controller</h2>
+      <p>MoreSpace Ibiza is the data controller for personal data you provide through this website.</p>
+      <p><strong>Contact:</strong> info@morespace.es · 690 324 49</p>
+    </section>
+
+    <section style="margin-bottom: 32px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px; color: var(--navy);">2. Use of cookies</h2>
+      <p>This site uses cookies for:</p>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>Technical cookies:</strong> required for the site and booking widget (StorageFy) to function.</li>
+        <li><strong>Preference cookies:</strong> to remember your cookie consent (stored on your device).</li>
+      </ul>
+      <p>Cookies are stored in your browser. You can delete or block them in your browser settings.</p>
+    </section>
+
+    <section style="margin-bottom: 32px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px; color: var(--navy);">3. Data we collect</h2>
+      <p>When you make a booking or contact us, we may collect: name, email, phone and address. This data is used solely to manage your booking or enquiry.</p>
+    </section>
+
+    <section style="margin-bottom: 32px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px; color: var(--navy);">4. Legal basis and purpose</h2>
+      <p>Processing is based on your consent (when accepting cookies or submitting a form) and on the performance of the booking contract. We do not share your data with third parties except where required by law.</p>
+    </section>
+
+    <section style="margin-bottom: 32px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px; color: var(--navy);">5. Your rights (GDPR)</h2>
+      <p>You may exercise your rights of access, rectification, erasure, restriction and portability by contacting info@morespace.es. You also have the right to lodge a complaint with the Spanish Data Protection Agency (AEPD).</p>
+    </section>
+
+    <p style="margin-top: 40px;"><a href="/en/" class="btn btn-secondary">← Back to home</a></p>
+  </main>
+
+  <div class="footer">
+    MoreSpace Ibiza · Container storage · Online booking · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Privacy</a>
+  </div>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
+    <div class="cookie-banner-inner">
+      <p>We use our own and third-party cookies for the site and online booking. By continuing, you accept our <a href="privacidad.html">Privacy and cookie policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn btn-primary" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        document.getElementById('cookie-banner').classList.add('cookie-banner--hidden');
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').classList.add('cookie-banner--hidden');
+      });
+    })();
+  </script>
+</body>
+</html>

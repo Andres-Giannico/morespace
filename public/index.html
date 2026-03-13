@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
   <title>MoreSpace Ibiza — Alquiler de trasteros en contenedores</title>
   <meta name="description" content="Trasteros en contenedores en Ibiza. Espacios seguros, acceso cómodo y reserva online con disponibilidad en tiempo real. Desde 205€/mes." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -23,7 +24,7 @@
   <meta property="og:url" content="https://morespace.vercel.app/" />
   <meta property="og:title" content="MoreSpace Ibiza — Alquiler de trasteros en contenedores" />
   <meta property="og:description" content="Trasteros en contenedores en Ibiza. Espacios seguros, acceso cómodo y reserva online con disponibilidad en tiempo real. Desde 205€/mes." />
-  <meta property="og:image" content="https://morespace.vercel.app/logo-morespace.png" />
+  <meta property="og:image" content="https://morespace.vercel.app/images/logo-morespace.png" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:site_name" content="MoreSpace Ibiza" />
@@ -31,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MoreSpace Ibiza — Alquiler de trasteros en contenedores" />
   <meta name="twitter:description" content="Trasteros en contenedores en Ibiza. Espacios seguros, reserva online. Desde 205€/mes." />
-  <meta name="twitter:image" content="https://morespace.vercel.app/logo-morespace.png" />
+  <meta name="twitter:image" content="https://morespace.vercel.app/images/logo-morespace.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <script type="application/ld+json">
   {
@@ -55,7 +56,7 @@
       "address": "Calle des Llaudadors 13, 07816 San Rafael, Ibiza, España"
     },
     "priceRange": "€205+",
-    "image": "https://morespace.vercel.app/logo-morespace.png",
+    "image": "https://morespace.vercel.app/images/logo-morespace.png",
     "sameAs": ["https://wa.me/3469032449"]
   }
   </script>
@@ -106,8 +107,8 @@
       <div class="brand">
         <div class="brand-logo">
           <picture>
-            <source srcset="logo-morespace.webp" type="image/webp" />
-            <img src="logo-morespace.png" alt="MoreSpace Ibiza" />
+            <source srcset="images/logo-morespace.webp" type="image/webp" />
+            <img src="images/logo-morespace.png" alt="MoreSpace Ibiza" />
           </picture>
         </div>
         <div>
@@ -159,8 +160,8 @@
       <div class="hero-side">
         <div class="logo-card">
           <picture>
-            <source srcset="logo-morespace.webp" type="image/webp" />
-            <img src="logo-morespace.png" alt="MoreSpace Ibiza — Trasteros en contenedores" />
+            <source srcset="images/logo-morespace.webp" type="image/webp" />
+            <img src="images/logo-morespace.png" alt="MoreSpace Ibiza — Trasteros en contenedores" />
           </picture>
         </div>
 
@@ -376,7 +377,16 @@
   </section>
 
   <div class="footer">
-    MoreSpace Ibiza · Trasteros en contenedores · Reserva online
+    MoreSpace Ibiza · Trasteros en contenedores · Reserva online · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Privacidad</a>
+  </div>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+    <div class="cookie-banner-inner">
+      <p>Utilizamos cookies propias y de terceros para el funcionamiento del sitio y la reserva online. Al continuar, aceptas nuestra <a href="privacidad.html">Política de privacidad y cookies</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn btn-primary" type="button">Aceptar</button>
+      </div>
+    </div>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/3469032449" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
@@ -391,6 +401,15 @@
         document.getElementById('nav-toggle').checked = false;
       });
     });
+    (function() {
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        document.getElementById('cookie-banner').classList.add('cookie-banner--hidden');
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').classList.add('cookie-banner--hidden');
+      });
+    })();
   </script>
 </body>
 </html>

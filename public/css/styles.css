@@ -624,6 +624,71 @@ section {
   text-align: center;
 }
 
+/* Cookie banner - RGPD */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: white;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 24px rgba(10, 71, 119, 0.08);
+  padding: 20px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.cookie-banner--hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-banner-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+  flex: 1;
+  min-width: 200px;
+}
+
+.cookie-banner a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner a:hover {
+  color: var(--navy-dark);
+}
+
+.cookie-banner-actions {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .cookie-banner-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cookie-banner-actions .btn {
+    width: 100%;
+  }
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .split,

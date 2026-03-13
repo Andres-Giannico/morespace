@@ -62,3 +62,31 @@ El sitio incluye:
 **Para acelerar la indexación:**
 1. [Google Search Console](https://search.google.com/search-console): añade la propiedad y envía el sitemap.
 2. [Bing Webmaster Tools](https://www.bing.com/webmasters): igual.
+
+## 5. Estructura de archivos
+
+```
+public/
+├── index.html              # Página principal (ES)
+├── privacidad.html         # Política de privacidad (ES)
+├── favicon.ico             # Favicon legacy (raíz para compatibilidad)
+├── robots.txt
+├── sitemap.xml
+├── css/
+│   └── styles.css
+├── images/
+│   ├── logo-morespace.png  # Logo principal
+│   ├── logo-morespace.webp
+│   ├── logo.svg
+│   ├── logo-container.png  # Logo alternativo
+│   ├── logo-container.webp
+│   ├── icons/              # Favicons
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   └── apple-touch-icon.png
+│   └── source/             # Archivos fuente de diseño
+│       └── logo-isometric-source.png
+└── en/
+    ├── index.html
+    └── privacidad.html
+```
