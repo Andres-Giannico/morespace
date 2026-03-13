@@ -45,3 +45,20 @@ git push -u origin main
 5. **Deploy** → en unos segundos tendrás una URL tipo `tu-proyecto.vercel.app`.
 
 Cada vez que hagas `git push` a `main`, Vercel desplegará automáticamente.
+
+## 4. SEO e indexación
+
+El sitio incluye:
+- **robots.txt**: Permite crawlers de Google, Bing, OpenAI (GPTBot, OAI-SearchBot) y otros.
+- **sitemap.xml**: Lista todas las URLs para indexación.
+- **Meta tags**: Open Graph, Twitter Card, canonical, hreflang (ES/EN).
+- **JSON-LD**: Schema.org LocalBusiness y FAQPage para rich snippets.
+
+**Si usas dominio propio** (ej: morespace.es), reemplaza `https://morespace.vercel.app` por tu URL en:
+- `public/robots.txt` (línea Sitemap)
+- `public/sitemap.xml` (todas las URLs)
+- `public/index.html` y `public/en/index.html` (canonical, og:url, og:image, etc.)
+
+**Para acelerar la indexación:**
+1. [Google Search Console](https://search.google.com/search-console): añade la propiedad y envía el sitemap.
+2. [Bing Webmaster Tools](https://www.bing.com/webmasters): igual.

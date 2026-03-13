@@ -1,0 +1,27 @@
+# MoreSpace Ibiza - robots.txt
+# Permite indexación en buscadores (Google, Bing, etc.) y crawlers de IA (OpenAI, etc.)
+
+User-agent: *
+Allow: /
+
+# OpenAI - GPTBot: permite entrenamiento de modelos (para que ChatGPT conozca el negocio)
+User-agent: GPTBot
+Allow: /
+
+# OpenAI - OAI-SearchBot: permite aparecer en búsquedas de ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://morespace.vercel.app/sitemap.xml
