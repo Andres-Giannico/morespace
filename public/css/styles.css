@@ -61,6 +61,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 16px;
   min-width: 0;
+  margin-left: 12%;
 }
 
 .brand-logo {
