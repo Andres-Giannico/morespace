@@ -754,20 +754,45 @@ section {
   }
 
   .hero-card {
-    padding: 20px 0;
+    padding: 28px 24px 32px;
     min-height: auto;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
   }
 
   h1 {
     font-size: clamp(32px, 8vw, 42px);
+    margin-bottom: 14px;
   }
 
   .hero p {
     font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta {
+    margin-top: 4px;
+    gap: 10px;
+  }
+
+  .hero-badges {
+    margin-top: 22px;
+    gap: 8px;
   }
 
   .mini-stats {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stat {
+    padding: 20px;
+  }
+
+  .logo-card {
+    padding: 24px;
   }
 
   .price-pill {
@@ -784,12 +809,22 @@ section {
 }
 
 @media (max-width: 480px) {
+  .hero-card {
+    padding: 24px 20px 28px;
+  }
+
   h1 {
     font-size: 28px;
   }
 
   .hero-badges {
     flex-direction: column;
+    gap: 8px;
+  }
+
+  .badge {
+    width: 100%;
+    text-align: center;
   }
 
   .btn {
