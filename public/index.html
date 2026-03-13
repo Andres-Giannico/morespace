@@ -113,6 +113,11 @@
         </div>
       </div>
 
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </label>
+
       <nav class="nav">
         <a href="#beneficios">Beneficios</a>
         <a href="#contenedores">Contenedores</a>
@@ -377,5 +382,12 @@
 
   <script src="https://www.storagefy.app/widget/widget.js"></script>
   <link rel="stylesheet" href="https://www.storagefy.app/widget/widget.css">
+  <script>
+    document.querySelectorAll('.nav a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
