@@ -31,4 +31,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://morespace.vercel.app/storagefy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://morespace.vercel.app/storagefy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morespace.vercel.app/en/storagefy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morespace.vercel.app/storagefy.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://morespace.vercel.app/en/storagefy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://morespace.vercel.app/storagefy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morespace.vercel.app/en/storagefy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morespace.vercel.app/storagefy.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

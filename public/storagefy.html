@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+  <title>Sistema Automático con Storagefy — MoreSpace Ibiza | Trasteros en contenedores</title>
+  <meta name="description" content="Cómo automatizamos MoreSpace Ibiza con Storagefy. Software de gestión para self storage: reservas online, cobros recurrentes con Stripe, facturación automática y control de acceso." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="keywords" content="Storagefy, software self storage, gestión trasteros, automatización almacenamiento, cobros recurrentes Stripe, facturación automática trasteros" />
+  <link rel="canonical" href="https://morespace.vercel.app/storagefy.html" />
+  <link rel="alternate" hreflang="es" href="https://morespace.vercel.app/storagefy.html" />
+  <link rel="alternate" hreflang="en" href="https://morespace.vercel.app/en/storagefy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://morespace.vercel.app/storagefy.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://morespace.vercel.app/storagefy.html" />
+  <meta property="og:title" content="Sistema Automático con Storagefy — MoreSpace Ibiza" />
+  <meta property="og:description" content="Cómo automatizamos MoreSpace Ibiza con Storagefy. Reservas, pagos, acceso y facturación — todo desde el sistema." />
+  <meta property="og:image" content="https://morespace.vercel.app/images/logo-morespace.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo automatizamos todo con Storagefy en MoreSpace Ibiza",
+    "description": "MoreSpace Ibiza utiliza Storagefy para gestionar reservas, cobros recurrentes, facturación y control de acceso de forma automatizada.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MoreSpace Ibiza",
+      "url": "https://morespace.vercel.app"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://morespace.vercel.app/storagefy.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo automatizar cobros recurrentes en trasteros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes automatizar cobros recurrentes usando software de gestión como Storagefy integrado con Stripe. El cliente introduce sus datos de pago una vez y el sistema cobra automáticamente en cada ciclo (mensual, trimestral, etc.). Incluye recordatorios y links de pago 24/7."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué software de facturación usar para self storage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para self storage conviene un software que integre reservas, cobros recurrentes, control de acceso y facturación. Plataformas como Storagefy ofrecen todo en uno con Stripe para tarjeta y SEPA Direct Debit, ciclos configurables y área de cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el cobro automático con Stripe en almacenamiento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stripe permite cobros recurrentes mediante suscripción. El operador configura el ciclo de facturación y el cliente guarda su tarjeta o domiciliación SEPA. Stripe intenta el cobro en cada ciclo y gestiona reintentos y recordatorios automáticamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es la facturación recurrente SEPA para trasteros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La facturación recurrente SEPA usa domiciliación bancaria para cobrar el alquiler automáticamente cada mes o en el ciclo acordado. El cliente autoriza el cargo una vez y el banco ejecuta los cobros posteriores sin intervención manual."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <a href="/" style="display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit;">
+          <div class="brand-logo">
+            <picture>
+              <source srcset="images/logo-morespace.webp" type="image/webp" />
+              <img src="images/logo-morespace.png" alt="MoreSpace Ibiza" />
+            </picture>
+          </div>
+          <div>
+            <strong>MoreSpace Ibiza</strong>
+            <span>Trasteros en contenedores · Ibiza</span>
+          </div>
+        </a>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="/#beneficios">Beneficios</a>
+        <a href="/#contenedores">Contenedores</a>
+        <a href="/#disponibilidad">Disponibilidad</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#contacto">Contacto</a>
+        <a href="https://clientes.storagefy.app/es/MSGIBZ/customer/login" target="_blank" rel="noopener" class="nav-cta">Área de cliente</a>
+        <span class="lang-switcher"><a href="storagefy.html" class="lang-active">ES</a> · <a href="en/storagefy.html">EN</a></span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding: 48px 0 80px; max-width: 720px;">
+    <p style="margin-bottom: 16px;"><a href="/" style="color: var(--muted); text-decoration: none; font-size: 14px;">← Volver al inicio</a></p>
+
+    <div class="eyebrow" style="margin-bottom: 20px;">Sistema Automático</div>
+    <h1 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: 20px; color: var(--navy); line-height: 1.2;">Cómo automatizamos todo con Storagefy</h1>
+    <p style="font-size: 18px; line-height: 1.7; color: var(--text); margin-bottom: 24px;">
+      Gestionamos MoreSpace Ibiza en San Rafael de forma automatizada. Reservas, pagos, acceso y facturación — todo desde el sistema.
+    </p>
+    <p style="color: var(--muted); line-height: 1.7; margin-bottom: 40px;">
+      La morosidad en trasteros suele superar el 30% cuando los cobros son manuales. Con facturación recurrente automatizada, la reducimos de forma significativa.
+    </p>
+
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 24px; margin-bottom: 16px; color: var(--navy);">¿Qué es Storagefy?</h2>
+      <p style="line-height: 1.75; margin-bottom: 12px;">
+        <a href="https://storagefy.co/" target="_blank" rel="noopener" style="color: var(--navy); font-weight: 600;">Storagefy</a> es un software SaaS de gestión para operadores de self storage y parkings. Permite automatizar cobros recurrentes con Stripe (tarjeta o SEPA Direct Debit), configurar ciclos de facturación mensuales, quincenales, trimestrales o semestrales, y centralizar reservas, control de acceso y facturación en un solo sistema. En MoreSpace lo usamos desde el primer día.
+      </p>
+      <p style="line-height: 1.75;">
+        Storagefy nos permite operar de forma profesional y escalable, ofreciendo a nuestros clientes la mejor experiencia posible.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 24px; margin-bottom: 16px; color: var(--navy);">Automatización total del flujo operativo</h2>
+      <p style="line-height: 1.75; margin-bottom: 16px;">Todo el flujo está automatizado. Desde que un cliente reserva hasta que accede a su contenedor:</p>
+      <ul style="padding-left: 20px; line-height: 2;">
+        <li>Reserva online en tiempo real con disponibilidad actualizada al instante</li>
+        <li>Cobro recurrente automático vía tarjeta o SEPA — sin gestiones manuales</li>
+        <li>Acceso mediante app: el cliente gestiona su reserva desde su móvil</li>
+        <li>Facturación automática y área de cliente para consultar documentos</li>
+        <li>Gestión centralizada de los contenedores desde una sola plataforma</li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 24px; margin-bottom: 16px; color: var(--navy);">Cómo funciona la facturación recurrente en la práctica</h2>
+      <p style="line-height: 1.75; margin-bottom: 20px;">Así opera el cobro automático en nuestro día a día:</p>
+
+      <div class="card" style="margin-bottom: 16px;">
+        <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--navy);">1. Configuración del ciclo de cobro</h3>
+        <p style="margin: 0; line-height: 1.6;">Definimos el ciclo (mensual, trimestral, etc.) y el método de pago. El cliente introduce sus datos una vez.</p>
+      </div>
+      <div class="card" style="margin-bottom: 16px;">
+        <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--navy);">2. Cobro automático en fecha</h3>
+        <p style="margin: 0; line-height: 1.6;">El sistema intenta el cobro en la fecha programada. Si falla, envía recordatorios automáticos.</p>
+      </div>
+      <div class="card" style="margin-bottom: 16px;">
+        <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--navy);">3. Factura y acceso sin fricción</h3>
+        <p style="margin: 0; line-height: 1.6;">El cliente recibe la factura por email y mantiene acceso a su contenedor. Sin papeleos ni llamadas.</p>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 24px; margin-bottom: 16px; color: var(--navy);">Errores habituales con facturación manual</h2>
+      <p style="line-height: 1.75; margin-bottom: 16px;">Muchos operadores de almacenamiento cometen estos fallos cuando cobran a mano:</p>
+      <ul style="padding-left: 20px; line-height: 2; color: var(--muted);">
+        <li>× Enviar recordatorios tarde o de forma inconsistente, lo que aumenta la morosidad</li>
+        <li>× No tener links de pago 24/7 — el cliente quiere pagar pero no puede fuera del horario de oficina</li>
+        <li>× Perder tiempo con Excel y hojas de cálculo que se desactualizan y generan errores</li>
+        <li>× No integrar cobros con el control de acceso — pagos atrasados sin bloqueo automático</li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 24px; margin-bottom: 16px; color: var(--navy);">Beneficios para el cliente</h2>
+      <p style="line-height: 1.75; margin-bottom: 16px;">La automatización no es solo para nosotros. Nuestros clientes disfrutan de:</p>
+      <ul style="padding-left: 20px; line-height: 2;">
+        <li>Reserva en 2 minutos, sin papeleos ni esperas</li>
+        <li>Acceso con el móvil — sin llaves físicas que perder</li>
+        <li>Facturas y pagos siempre disponibles en el área de cliente</li>
+        <li>Transparencia total: precios claros, sin sorpresas</li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom: 48px;">
+      <h2 style="font-size: 24px; margin-bottom: 20px; color: var(--navy);">Preguntas frecuentes sobre automatización de trasteros</h2>
+
+      <div class="faq-item" style="margin-bottom: 24px;">
+        <h4 style="font-size: 16px; margin-bottom: 8px; color: var(--navy);">¿Cómo automatizar cobros recurrentes en trasteros?</h4>
+        <p style="margin: 0; line-height: 1.6; color: var(--muted);">Puedes automatizar cobros recurrentes usando software de gestión como Storagefy integrado con Stripe. El cliente introduce sus datos de pago una vez y el sistema cobra automáticamente en cada ciclo (mensual, trimestral, etc.). Incluye recordatorios y links de pago 24/7.</p>
+      </div>
+
+      <div class="faq-item" style="margin-bottom: 24px;">
+        <h4 style="font-size: 16px; margin-bottom: 8px; color: var(--navy);">¿Qué software de facturación usar para self storage?</h4>
+        <p style="margin: 0; line-height: 1.6; color: var(--muted);">Para self storage conviene un software que integre reservas, cobros recurrentes, control de acceso y facturación. Plataformas como Storagefy ofrecen todo en uno con Stripe para tarjeta y SEPA Direct Debit, ciclos configurables y área de cliente.</p>
+      </div>
+
+      <div class="faq-item" style="margin-bottom: 24px;">
+        <h4 style="font-size: 16px; margin-bottom: 8px; color: var(--navy);">¿Cómo funciona el cobro automático con Stripe en almacenamiento?</h4>
+        <p style="margin: 0; line-height: 1.6; color: var(--muted);">Stripe permite cobros recurrentes mediante suscripción. El operador configura el ciclo de facturación y el cliente guarda su tarjeta o domiciliación SEPA. Stripe intenta el cobro en cada ciclo y gestiona reintentos y recordatorios automáticamente.</p>
+      </div>
+
+      <div class="faq-item" style="margin-bottom: 24px;">
+        <h4 style="font-size: 16px; margin-bottom: 8px; color: var(--navy);">¿Qué es la facturación recurrente SEPA para trasteros?</h4>
+        <p style="margin: 0; line-height: 1.6; color: var(--muted);">La facturación recurrente SEPA usa domiciliación bancaria para cobrar el alquiler automáticamente cada mes o en el ciclo acordado. El cliente autoriza el cargo una vez y el banco ejecuta los cobros posteriores sin intervención manual.</p>
+      </div>
+    </section>
+
+    <div class="card" style="text-align: center; padding: 32px;">
+      <p style="margin-bottom: 20px; font-size: 18px; color: var(--navy);"><strong>Conoce más sobre la plataforma que usamos:</strong></p>
+      <a href="https://storagefy.co/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-bottom: 16px;">storagefy.co</a>
+      <p style="margin: 0;"><a href="/#disponibilidad" class="btn btn-secondary">Ver disponibilidad</a></p>
+    </div>
+
+    <p style="margin-top: 32px;"><a href="/" class="btn btn-secondary">← Volver al inicio</a></p>
+  </main>
+
+  <div class="footer">
+    MoreSpace Ibiza · Trasteros en contenedores · Reserva online · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Privacidad</a>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/3469032449" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    document.querySelectorAll('.nav a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
